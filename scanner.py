@@ -9,7 +9,7 @@ for portx in range(1, 100):
         s.connect(('ad.samsclass.info', portx))
         r = s.recv(1024)
         if 'Congratulations' in r.decode('utf8'):
-            print('[!] HIDDEN SERVICE FOUND %s ~ %s' % (portx, r.decode('utf8')))
+            print('[!] HIDDEN SERVICE FOUND: %s ~ %s' % (portx, r.decode('utf8')))
             s.close()
             break
         else:
